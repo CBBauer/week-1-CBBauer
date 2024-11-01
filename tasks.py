@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 
 # Follow the tasks below to practice basic Python concepts.
 # Write your code in between the dashed lines.
@@ -20,23 +20,25 @@ def step(num):
 
 # -----------------------------------------------
 
-
 # Task 2:
 # Instructions:
 #Write a function that takes in two arguments: a numpy array, and an integer (call argument "cutoff" and set default to 0).
 #The function should return a numpy array of the same length, with all elements smaller than the cutoff being set to cutoff).
 #The name of the function should be ReLu
 
-
 # Your code here:
 # -----------------------------------------------
 
 def ReLu(num_arr, cutoff=0):
-    for i in range(num_arr):
-        result[i] = [(num_arr[i] if num_arr[i] > 0 else cutoff)]
-    return result
-# -----------------------------------------------
+    # copy num_arr
+    result = np.copy(num_arr)
 
+    # apply ReLu fct
+    for i in range(len(num_arr)):
+        result[i] = num_arr[i] if num_arr[i] > 0 else cutoff
+    return result
+
+# -----------------------------------------------
 
 # Task 3:
 # Instructions:
@@ -48,7 +50,8 @@ def ReLu(num_arr, cutoff=0):
 # Your code here:
 # -----------------------------------------------
 
-# def neural_net_layer
-
-
+def neural_net_layer(arr_2, arr_1):
+    mult = np.dot(arr_2, arr_1)
+    return ReLu(mult)
+a
 # ------------------------------------------
