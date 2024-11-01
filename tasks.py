@@ -29,7 +29,7 @@ def step(num):
 # Your code here:
 # -----------------------------------------------
 
-def ReLU(num_arr, cutoff=0):
+def ReLu(num_arr, cutoff=0):
     # copy num_arr
     result = np.copy(num_arr)
 
