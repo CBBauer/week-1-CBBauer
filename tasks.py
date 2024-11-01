@@ -29,7 +29,7 @@ def step(num):
 # Your code here:
 # -----------------------------------------------
 
-def ReLu(num_arr, cutoff=0):
+def ReLU(num_arr, cutoff=0):
     # copy num_arr
     result = np.copy(num_arr)
 
@@ -53,5 +53,5 @@ def ReLu(num_arr, cutoff=0):
 def neural_net_layer(arr_2, arr_1):
     mult = np.dot(arr_2, arr_1)
     return ReLu(mult)
-a
+
 # ------------------------------------------
