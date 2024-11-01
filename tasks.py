@@ -53,5 +53,5 @@ def ReLU(num_arr, cutoff=0):
 def neural_net_layer(arr_2, arr_1):
     mult = np.dot(arr_2, arr_1)
     return ReLU(mult)
-
+ 
 # ------------------------------------------
