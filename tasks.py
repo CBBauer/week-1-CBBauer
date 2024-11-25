@@ -13,10 +13,13 @@ import numpy as np
 # Your code here:
 # -----------------------------------------------
 
+# def step(num):
+#     if num > 0:
+#         return 1
+#     return -1
+
 def step(num):
-    if num > 0:
-        return 1
-    return -1
+    return 1 if num > 0 else -1
 
 # -----------------------------------------------
 
@@ -29,14 +32,17 @@ def step(num):
 # Your code here:
 # -----------------------------------------------
 
-def ReLU(num_arr, cutoff=0):
-    # copy num_arr
-    result = np.copy(num_arr)
+# def ReLU(num_arr, cutoff=0):
+#     # copy num_arr
+#     result = np.copy(num_arr)
 
-    # apply ReLu fct
-    for i in range(len(num_arr)):
-        result[i] = num_arr[i] if num_arr[i] > 0 else cutoff
-    return result
+#     # apply ReLu fct
+#     for i in range(len(num_arr)):
+#         result[i] = num_arr[i] if num_arr[i] > 0 else cutoff
+#     return result
+
+def ReLU(num_arr, cutoff = 0):
+    return np.maximum(num_arr, cutoff)
 
 # -----------------------------------------------
 
@@ -50,8 +56,11 @@ def ReLU(num_arr, cutoff=0):
 # Your code here:
 # -----------------------------------------------
 
-def neural_net_layer(arr_2, arr_1):
-    mult = np.dot(arr_2, arr_1)
-    return ReLU(mult)
+# def neural_net_layer(arr_2, arr_1):
+#     mult = np.dot(arr_2, arr_1)
+#     return ReLU(mult)
  
+def neural_net_layer(a2d, a1d):
+    return ReLU(np.dot(a2d, a1d))
+
 # ------------------------------------------
